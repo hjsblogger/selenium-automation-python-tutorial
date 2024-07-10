@@ -26,7 +26,7 @@ class TestSwitchTabsDemo:
         driver.switch_to.new_window('tab')
 
         # Modify the above line to open a new window
-        driver.switch_to.new_window('window')
+        # driver.switch_to.new_window('window')
 
         time.sleep(4)
         driver.get(locators.test_ecomm_login_playground_url)
