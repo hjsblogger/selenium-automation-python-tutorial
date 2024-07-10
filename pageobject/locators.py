@@ -24,12 +24,14 @@ from bs4 import BeautifulSoup
 class locators(object):
     test_sel_playground_url = "https://www.lambdatest.com/selenium-playground/"
     test_ecomm_login_playground_url = "https://ecommerce-playground.lambdatest.io/index.php?route=account/login"
-
+    test_ecomm_playground_url = "https://ecommerce-playground.lambdatest.io/"
+    test_sel_input_playground_url = "https://www.lambdatest.com/selenium-playground/input-form-demo"
 
     ########## Locators for Selenium playground ##########
 
     xSubmitForm = "//a[.='Input Form Submit']"
     xInpName = "//input[@id='name']"
+    cInpName = "#name"
     xInpEmail = "//form[@id='seleniumform']//input[@name='email']"
     xInpPassword = "//input[@name='password']"
     cssCompany = "#company"
@@ -54,4 +56,17 @@ class locators(object):
     loginPassword = "123456"
 
     strPageTitle = "My Account"
-    
+
+
+    ########## Locators for web elements test ##########
+
+    idInputEmail = "inputEmail4"
+    nameInputCompany = "company"
+    # document.getElementsByClassName("module-mz_product_listing")
+    # list of 5 items
+    classProdListing = "module-mz_product_listing"
+    tagHeading = "h4"
+    linkPricing = "Pricing"
+    linkPricingTitle = "LambdaTest Plans and Pricing | 60 Min/Month Freemium Plan"
+    linkPartialDown = "Download"
+    # linkPartialTitle = "LambdaTest Plans and Pricing | 60 Min/Month Freemium Plan"

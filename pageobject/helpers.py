@@ -20,6 +20,14 @@ def locate_element(driver: WebDriver, by: By, locator: str) -> WebElement:
     except NoSuchElementException:
         print(f"Element not found")
         return None
+    
+def locate_elements(driver: WebDriver, by: By, locator: str) -> list:
+    try:
+        web_element_list = driver.find_elements(by, locator)
+        return web_element_list
+    except NoSuchElementException:
+        print(f"Elements not found")
+        return None
 
 def enter_details(driver: WebDriver, by: By, locator: str,
                 input: str, sleep_time: int) -> None:
