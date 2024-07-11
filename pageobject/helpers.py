@@ -21,6 +21,30 @@ def locate_element(driver: WebDriver, by: By, locator: str) -> WebElement:
         print(f"Element not found")
         return None
     
+def dropdown_select_element(select_dropdown: Select, method_name: str, 
+        *args, **kwargs) -> None:
+    if method_name == "visible_text":
+        select_dropdown.select_by_visible_text(args[0])
+    elif method_name == "select_value":
+        select_dropdown.select_by_value(args[0])
+    elif method_name == "select_index":
+        select_dropdown.select_by_index(args[0])
+
+    return
+
+def print_select_element(select_dropdown: Select, method_name: str) -> None:
+    
+    # def all_selected_options(self) -> List[WebElement]:
+    selected_options = select_dropdown.all_selected_options
+
+    # Print the text of each selected option
+    for option in selected_options:
+        print(f"'{method_name}': Selected options text:", option.text)
+
+    # Deselect all the values
+    select_dropdown.deselect_all()
+    return
+    
 def locate_elements(driver: WebDriver, by: By, locator: str) -> list:
     try:
         web_element_list = driver.find_elements(by, locator)

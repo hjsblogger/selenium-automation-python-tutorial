@@ -26,6 +26,7 @@ class locators(object):
     test_ecomm_login_playground_url = "https://ecommerce-playground.lambdatest.io/index.php?route=account/login"
     test_ecomm_playground_url = "https://ecommerce-playground.lambdatest.io/"
     test_sel_input_playground_url = "https://www.lambdatest.com/selenium-playground/input-form-demo"
+    test_dropdown_sel_playground_url = "https://www.lambdatest.com/selenium-playground/select-dropdown-demo"
 
     ########## Locators for Selenium playground ##########
 
@@ -57,7 +58,6 @@ class locators(object):
 
     strPageTitle = "My Account"
 
-
     ########## Locators for web elements test ##########
 
     idInputEmail = "inputEmail4"
@@ -70,3 +70,8 @@ class locators(object):
     linkPricingTitle = "LambdaTest Plans and Pricing | 60 Min/Month Freemium Plan"
     linkPartialDown = "Download"
     # linkPartialTitle = "LambdaTest Plans and Pricing | 60 Min/Month Freemium Plan"
+
+     ########## Locators for web elements test ##########
+
+    cssSingleSelect = "#select-demo"
+    idMultiSelect = "multi-select"
