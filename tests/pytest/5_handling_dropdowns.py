@@ -83,7 +83,8 @@ class TestSeleniumPlayground:
             print_select_element(select_dropdown, "Value")
 
             # deselect methods are only available for multi-select drop-downs
-            driver.execute_script("lambda-status=passed")
+            if exec_platform == 'cloud':
+                driver.execute_script("lambda-status=passed")
         else:
             if exec_platform == 'cloud':
                 driver.execute_script("lambda-status=failed")
