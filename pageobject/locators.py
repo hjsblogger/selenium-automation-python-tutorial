@@ -27,6 +27,8 @@ class locators(object):
     test_ecomm_playground_url = "https://ecommerce-playground.lambdatest.io/"
     test_sel_input_playground_url = "https://www.lambdatest.com/selenium-playground/input-form-demo"
     test_dropdown_sel_playground_url = "https://www.lambdatest.com/selenium-playground/select-dropdown-demo"
+    test_radio_button_sel_playground = "https://www.lambdatest.com/selenium-playground/radiobutton-demo"
+    test_radio_button_hidden_playground = "https://paulocoliveira.github.io/mypages/radiobuttons.html"
 
     ########## Locators for Selenium playground ##########
 
@@ -71,7 +73,20 @@ class locators(object):
     linkPartialDown = "Download"
     # linkPartialTitle = "LambdaTest Plans and Pricing | 60 Min/Month Freemium Plan"
 
-     ########## Locators for web elements test ##########
+    ########## Locators for web elements test ##########
 
     cssSingleSelect = "#select-demo"
     idMultiSelect = "multi-select"
+
+    ########## Locators for radio button test ##########
+
+    nameRadioButton = "optradio"
+    # Disabled radio button
+    nameDisabledButton = "prop"
+
+    #Get Value button
+    cssGetValueButton = "#buttoncheck"
+
+    # Hidden radio button
+    idHiddenRadio = "toggle-hidden"
+    idHiddenEnv = "hidden-env"

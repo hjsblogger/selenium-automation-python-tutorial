@@ -8,7 +8,7 @@ def create_actions(driver) -> None:
     actions = ActionChains(driver)
     return actions
 
-def create_waits(driver: WebDriver, duration: int) -> None:
+def create_waits(driver: WebDriver, duration: int) -> WebDriverWait:
     # Explicit wait of 10 seconds
     wait = WebDriverWait(driver, duration)
     return wait
