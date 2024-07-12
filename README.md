@@ -1,8 +1,8 @@
-# Web Scraping with Selenium Python and Beautiful Soup
+# Tutorial: Automated Testing using Selenium Python
 
-<img width="1000" height="500" alt="Bulb" src="https://github.com/hjsblogger/web-scraping-with-python/assets/1688653/5f7ad1c6-f5af-4607-a421-113eef7580b3">
+<img width="1000" height="400" alt="Bulb" src="https://github.com/user-attachments/assets/2806cf9b-56ae-418d-88dd-a27a9f7d71a6">
 
-<div align="center"><a href="https://scrape-it.cloud/assets/blog_img/web-scraping-with-python.png">Image Credit</a></div>
+<div align="center"><a href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_utiFN8XiYDKXMtI1UW8YG4buAslJnsuBNw&s">Image Credit</a></div>
 <br/>
 
 In this 'Web Scraping with Python' repo, we have covered the following usecases:
