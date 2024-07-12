@@ -30,6 +30,7 @@ class locators(object):
     test_radio_button_sel_playground = "https://www.lambdatest.com/selenium-playground/radiobutton-demo"
     test_radio_button_hidden_playground = "https://paulocoliveira.github.io/mypages/radiobuttons.html"
     test_check_box_sel_playground = "https://www.lambdatest.com/selenium-playground/checkbox-demo"
+    test_alerts_sel_playground = "https://www.lambdatest.com/selenium-playground/javascript-alert-box-demo"
 
     ########## Locators for Selenium playground ##########
 
@@ -101,4 +102,10 @@ class locators(object):
     # Check Box 4: //div[@class='w-full px-15 ']//div[4]/input[@class='mr-10']
     xDisabledCheckBox_1 = "//div[@class='w-full px-15 ']//div["
     xDisabledCheckBox_2 = "]/input[@class='mr-10']"
+
+    ########## Locators for handling alerts ##########
+    
+    cssAlert_1 = ".my-30"
+    cssAlert_2 =".py-20.ml-10 .btn"
+    cssAlert_3 = "section:nth-of-type(3) div:nth-of-type(3) .btn"
 
