@@ -29,6 +29,7 @@ class locators(object):
     test_dropdown_sel_playground_url = "https://www.lambdatest.com/selenium-playground/select-dropdown-demo"
     test_radio_button_sel_playground = "https://www.lambdatest.com/selenium-playground/radiobutton-demo"
     test_radio_button_hidden_playground = "https://paulocoliveira.github.io/mypages/radiobuttons.html"
+    test_check_box_sel_playground = "https://www.lambdatest.com/selenium-playground/checkbox-demo"
 
     ########## Locators for Selenium playground ##########
 
@@ -90,3 +91,14 @@ class locators(object):
     # Hidden radio button
     idHiddenRadio = "toggle-hidden"
     idHiddenEnv = "hidden-env"
+
+    ########## Locators for handling check boxes ##########
+
+    cssSingleCheckBox = "#isAgeSelected"
+
+    # Disabled check boxes 1 ~ 4
+    # Check Box 1: //div[@class='w-full px-15 ']//div[1]/input[@class='mr-10']
+    # Check Box 4: //div[@class='w-full px-15 ']//div[4]/input[@class='mr-10']
+    xDisabledCheckBox_1 = "//div[@class='w-full px-15 ']//div["
+    xDisabledCheckBox_2 = "]/input[@class='mr-10']"
+
