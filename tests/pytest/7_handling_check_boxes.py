@@ -14,7 +14,7 @@ exec_platform = os.getenv('EXEC_PLATFORM')
 
 class TestSeleniumPlayground:
     def test_handle_check_box(self, driver):
-        print(sys._getframe.f_code.co_name)
+        method_name = sys._getframe().f_code.co_name
         driver.get(locators.test_check_box_sel_playground)
 
         # Commented once the tests are executed in non-headless mode
@@ -27,27 +27,35 @@ class TestSeleniumPlayground:
                 elem_checkbox.click()
                 driver.execute_script("lambda-status=passed")
         except NoSuchElementException:
-            print(f"Fail: Checkbox not found")
+            print(f"method_name: Checkbox not found")
             if exec_platform == 'cloud':
                 driver.execute_script("lambda-status=failed")
-            pytest.fail(f"{sys._getframe.f_code.co_name}: Test Failed")
+            pytest.fail(f"{method_name}: Test Failed")
 
     def test_check_disabled_check_box(self, driver):
-        print(sys._getframe.f_code.co_name)
+        method_name = sys._getframe().f_code.co_name
+
+        driver.get(locators.test_check_box_sel_playground)
+
+        # Commented once the tests are executed in non-headless mode
+        driver.maximize_window()
+
         check_counter = 0
         try:
-            for check_counter in range(3):
+            for check_counter in range(4):
                 result_xpath = locators.xDisabledCheckBox_1 + str(check_counter + 1) \
                     + locators.xDisabledCheckBox_2
+                print(result_xpath)
                 elem_checkbox = locate_element(driver, By.XPATH, result_xpath)
                 # Check if the checkbox is enabled, it yes than click on it
                 if elem_checkbox.is_enabled():
                     elem_checkbox.click()
-                    print(f"Checkbox with xpath {result_xpath} is clicked")
+                    print(f"{method_name}: Checkbox with xpath {result_xpath} is clicked")
                 else:
-                    print(f"Checkbox with xpath {result_xpath} is disabled, it is skipped")
+                    print(f"{method_name}: \
+                          Checkbox with xpath {result_xpath} is disabled, it is skipped")
         except NoSuchElementException:
             print(f"Fail: Checkbox not found")
             if exec_platform == 'cloud':
                 driver.execute_script("lambda-status=failed")
-            pytest.fail(f"{sys._getframe.f_code.co_name}: Test Failed")
+            pytest.fail(f"{method_name}: Test Failed")
