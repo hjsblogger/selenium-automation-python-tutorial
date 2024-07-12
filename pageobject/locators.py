@@ -31,6 +31,11 @@ class locators(object):
     test_radio_button_hidden_playground = "https://paulocoliveira.github.io/mypages/radiobuttons.html"
     test_check_box_sel_playground = "https://www.lambdatest.com/selenium-playground/checkbox-demo"
     test_alerts_sel_playground = "https://www.lambdatest.com/selenium-playground/javascript-alert-box-demo"
+    test_nested_frame_sel_playground = "https://www.lambdatest.com/selenium-playground/nested-frames/"
+
+    # Earlier used in https://github.com/hjsblogger/web-automation-with-pyppeteer/blob/main/
+    # tests/handling-iframe/test_page_class_iframe.py
+    test_iframe_sel_playground = "https://www.lambdatest.com/selenium-playground/iframe-demo/"
 
     ########## Locators for Selenium playground ##########
 
@@ -108,4 +113,19 @@ class locators(object):
     cssAlert_1 = ".my-30"
     cssAlert_2 =".py-20.ml-10 .btn"
     cssAlert_3 = "section:nth-of-type(3) div:nth-of-type(3) .btn"
+
+    ########## Locators for handling frames ##########
+
+    nameFrameTop = "frame-top"
+    nameFrameLeft = "frame-left"
+    nameFrameMiddle = "frame-middle"
+    nameFrameRight = "frame-right"
+
+    # Handling iFrames #
+    idFrame = "iFrame1"
+    idTextBox = ".rsw-ce"
+
+    xloc_bold_button = "//button[.='𝐁']"
+    xloc_underline_button = "//span[.='𝐔']"
+    classBody = ".rsw-ce"
 
