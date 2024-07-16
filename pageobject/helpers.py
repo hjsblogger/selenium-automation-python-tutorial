@@ -4,7 +4,7 @@ import sys
 from pageobject.locators import locators
 from pageobject.locators import *
 
-def create_actions(driver) -> None:
+def create_actions(driver) -> ActionChains:
     actions = ActionChains(driver)
     return actions
 
@@ -48,6 +48,14 @@ def print_select_element(select_dropdown: Select, method_name: str) -> None:
 def locate_elements(driver: WebDriver, by: By, locator: str) -> list:
     try:
         web_element_list = driver.find_elements(by, locator)
+        return web_element_list
+    except NoSuchElementException:
+        print(f"Elements not found")
+        return None
+    
+def locate_elements_gen(element: WebElement, by: By, locator: str) -> list:
+    try:
+        web_element_list = element.find_elements(by, locator)
         return web_element_list
     except NoSuchElementException:
         print(f"Elements not found")

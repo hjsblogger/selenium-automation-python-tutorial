@@ -32,6 +32,7 @@ class locators(object):
     test_check_box_sel_playground = "https://www.lambdatest.com/selenium-playground/checkbox-demo"
     test_alerts_sel_playground = "https://www.lambdatest.com/selenium-playground/javascript-alert-box-demo"
     test_nested_frame_sel_playground = "https://www.lambdatest.com/selenium-playground/nested-frames/"
+    test_mouse_sel_playground = "https://www.lambdatest.com/selenium-playground/drag-and-drop-demo"
 
     # Earlier used in https://github.com/hjsblogger/web-automation-with-pyppeteer/blob/main/
     # tests/handling-iframe/test_page_class_iframe.py
@@ -129,3 +130,17 @@ class locators(object):
     xloc_underline_button = "//span[.='𝐔']"
     classBody = ".rsw-ce"
 
+    ########## Locators for mouse interactions ##########
+
+    xDraggableFrame_1 = "//span[.='Draggable 1']"
+    # xDraggableFrame_2 = "//span[.='Draggable 2']"
+    # xDraggableFrame_1 = "//*[@id='todrag']/span[1]"
+    xDraggableFrame_2 = "//*[@id='todrag']/span[2]"
+    xDroppableFrame = "//div[@id='mydropzone']"
+    idDroppableList = "droppedlist"
+
+    linkFeaturedItems =  "AddOns"
+    linkDesignItems =  "Designs"
+
+    targetURL = "https://ecommerce-playground.lambdatest.io/index.php?route=extension/maza/page&page_id=11"
+    resultant_str = "Accord"
