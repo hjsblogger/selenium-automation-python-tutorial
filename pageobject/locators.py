@@ -54,6 +54,9 @@ class locators(object):
     cssInpState = "#inputState"
     cssInpZip = "#inputZip"
     cssInpButton = ".bg-lambda-900"
+    nameSearchBox = "search"
+
+    strStoreSearchTitle = "Search - IPod Nano"
 
     ########## Locators for e-commerce playground ##########
 

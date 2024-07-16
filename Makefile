@@ -9,8 +9,8 @@ install:
 	$(PIP) install -r requirements.txt
 	@echo "Set env vars LT_USERNAME & LT_ACCESS_KEY"
     # Procure Username and AccessKey from https://accounts.lambdatest.com/security
-    export LT_USERNAME=himanshuj
-    export LT_ACCESS_KEY=Ia1Miq
+    export LT_USERNAME=himanshujlambdatest
+    export LT_ACCESS_KEY=URsVCP7vFs0pY9QVs016neJhZ2BuynstLaGYYzuZzdHB7r8x8s
 
 .PHONY: test
 test:
@@ -21,9 +21,9 @@ simple_selenium_test:
 	- echo $(EXEC_PLATFORM)
 	- $(PYTEST) --verbose --capture=no tests/pytest/1_simple_selenium_test.py
 
-send_keys_test:
+keyboard_interactions_test:
 	- echo $(EXEC_PLATFORM)
-	- $(PYTEST) --verbose --capture=no tests/pytest/2_send_keys_test.py
+	- $(PYTEST) --verbose --capture=no -n 2 tests/pytest/2_keyboard_interactions.py
 
 switch_tabs_test:
 	- echo $(EXEC_PLATFORM)
@@ -51,7 +51,11 @@ handling_alerts_test:
 
 handling_iframes_test:
 	- echo $(EXEC_PLATFORM)
-	- $(PYTEST) --verbose --capture=no tests/pytest/9_handling_iframes.py 
+	- $(PYTEST) --verbose --capture=no tests/pytest/9_handling_iframes.py
+
+mouse_interactions_test:
+	- echo $(EXEC_PLATFORM)
+	- $(PYTEST) --verbose --capture=no -n 2 tests/pytest/10_mouse_interactions.py
 
 .PHONY: clean
 clean:
@@ -75,7 +79,7 @@ help:
 	@echo "install : Install project dependencies"
 	@echo "clean : Clean up temp files"
 	@echo "simple_selenium_test : Execution simple Selenium Python test"
-	@echo "send_keys_test : Demonstration of SendKeys"
+	@echo "keyboard_interactions_test : Automating keyboard interactions"
 	@echo "switch_tabs_test : Demonstration of switching tabs & windows"
 	@echo "locating_web_elements_test : Locating WebElements in Selenium Python"
 	@echo "handling_dropdowns_test : Handling Dropdowns"
@@ -83,3 +87,4 @@ help:
 	@echo "locating_check_boxes_test : Locating & Interacting with Checkboxes"
 	@echo "handling_alerts_test : Locating & Interacting with Alerts"
 	@echo "handling_iframes_test : Handling Frames & iFrames"
+	@echo "mouse_interactions_test : Automating Mouse Interactions"
