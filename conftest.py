@@ -16,7 +16,7 @@ def driver(request):
 
         gridURL = "https://{}:{}@hub.lambdatest.com/wd/hub".format(username, access_key)
         
-        ch_options = webdriver.FirefoxOptions()
+        ch_options = webdriver.ChromeOptions()
         ch_options.browser_version = "latest"
         ch_options.platform_name = "Windows 11"
 
@@ -25,7 +25,7 @@ def driver(request):
         lt_options["project"] = "Project: Getting Started with Selenium Python"
         lt_options["name"] = "Test: Getting Started with Selenium Python"
 
-        lt_options["browserName"] = "Firefox"
+        lt_options["browserName"] = "Chrome"
         lt_options["browserVersion"] = "latest"
         lt_options["platformName"] = "Windows 11"
 
