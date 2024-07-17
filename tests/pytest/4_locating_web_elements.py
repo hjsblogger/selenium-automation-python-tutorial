@@ -12,8 +12,8 @@ exec_platform = os.getenv('EXEC_PLATFORM')
 
 @pytest.mark.usefixtures('driver')
 
-class TestSeleniumPlayground:
-    def test_scrap_ecommerce(self, driver):
+class TestLocatingElements:
+    def test_locating_elements(self, driver):
         resultant_str = "Thanks for contacting us, we will get back to you shortly."
 
         driver.get(locators.test_sel_playground_url)

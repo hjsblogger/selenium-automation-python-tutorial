@@ -11,9 +11,8 @@ from pageobject.helpers import *
 exec_platform = os.getenv('EXEC_PLATFORM')
 
 @pytest.mark.usefixtures('driver')
-
-class TestSeleniumPlayground:
-    def test_scrap_ecommerce(self, driver):
+class TestSimpleSelenium:
+    def test_simple_selenium(self, driver):
         resultant_str = "Thanks for contacting us, we will get back to you shortly."
 
         driver.get(locators.test_sel_playground_url)

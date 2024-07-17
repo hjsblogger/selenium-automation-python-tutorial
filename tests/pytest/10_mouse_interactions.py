@@ -12,7 +12,7 @@ from selenium.webdriver.common.keys import Keys
 exec_platform = os.getenv('EXEC_PLATFORM')
 
 @pytest.mark.usefixtures('driver')
-class TestSeleniumPlayground:
+class TestMouseInteractions:
     # Reference - https://www.selenium.dev/documentation/webdriver/
     # actions_api/mouse/#drag-and-drop-on-element
     def test_drag_drop_element(self, driver):

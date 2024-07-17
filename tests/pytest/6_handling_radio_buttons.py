@@ -12,7 +12,7 @@ exec_platform = os.getenv('EXEC_PLATFORM')
 
 @pytest.mark.usefixtures('driver')
 
-class TestSeleniumPlayground:
+class TestRadioButtons:
     def test_handle_radio_button(self, driver):
         driver.get(locators.test_radio_button_sel_playground)
 

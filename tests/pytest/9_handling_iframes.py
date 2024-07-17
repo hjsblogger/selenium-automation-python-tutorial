@@ -13,7 +13,7 @@ exec_platform = os.getenv('EXEC_PLATFORM')
 
 @pytest.mark.usefixtures('driver')
 
-class TestSeleniumPlayground:
+class TestHandlingFrames:
     def test_handle_nested_frame(self, driver):
         method_name = sys._getframe().f_code.co_name
         driver.get(locators.test_nested_frame_sel_playground)

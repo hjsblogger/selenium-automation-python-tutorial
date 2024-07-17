@@ -12,7 +12,7 @@ exec_platform = os.getenv('EXEC_PLATFORM')
 
 @pytest.mark.usefixtures('driver')
 
-class TestSeleniumPlayground:
+class TestCheckBoxes:
     def test_handle_check_box(self, driver):
         method_name = sys._getframe().f_code.co_name
         driver.get(locators.test_check_box_sel_playground)

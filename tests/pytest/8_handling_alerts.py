@@ -12,7 +12,7 @@ exec_platform = os.getenv('EXEC_PLATFORM')
 
 @pytest.mark.usefixtures('driver')
 
-class TestSeleniumPlayground:
+class TestHandlingAlerts:
     def test_handle_js_alerts1(self, driver):
         method_name = sys._getframe().f_code.co_name
         driver.get(locators.test_alerts_sel_playground)

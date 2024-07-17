@@ -14,7 +14,7 @@ exec_platform = os.getenv('EXEC_PLATFORM')
 
 @pytest.mark.usefixtures('driver')
 
-class TestSendKeysDemo:
+class TestKeyboardInteractions:
     def test_send_keys_demo(self, driver):
         driver.get(locators.test_ecomm_login_playground_url)
 

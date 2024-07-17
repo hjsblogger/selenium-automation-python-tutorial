@@ -12,7 +12,7 @@ exec_platform = os.getenv('EXEC_PLATFORM')
 
 @pytest.mark.usefixtures('driver')
 
-class TestSeleniumPlayground:
+class TestHandlingDropdowns:
     def test_handle_single_dropdown(self, driver):
         driver.get(locators.test_dropdown_sel_playground_url)
 
