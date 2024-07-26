@@ -57,6 +57,10 @@ mouse_interactions_test:
 	- echo $(EXEC_PLATFORM)
 	- $(PYTEST) --verbose --capture=no -n 2 tests/pytest/10_mouse_interactions.py
 
+bitcoin_click_test:
+	- echo $(EXEC_PLATFORM)
+	- $(PYTEST) --verbose --capture=no tests/pytest/11_bitcoin_click_test.py
+
 .PHONY: clean
 clean:
     # This helped: https://gist.github.com/hbsdev/a17deea814bc10197285

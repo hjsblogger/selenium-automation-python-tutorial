@@ -33,6 +33,7 @@ class locators(object):
     test_alerts_sel_playground = "https://www.lambdatest.com/selenium-playground/javascript-alert-box-demo"
     test_nested_frame_sel_playground = "https://www.lambdatest.com/selenium-playground/nested-frames/"
     test_mouse_sel_playground = "https://www.lambdatest.com/selenium-playground/drag-and-drop-demo"
+    test_bitcoin_url = "https://bitcoin.org/en/"
 
     # Earlier used in https://github.com/hjsblogger/web-automation-with-pyppeteer/blob/main/
     # tests/handling-iframe/test_page_class_iframe.py
