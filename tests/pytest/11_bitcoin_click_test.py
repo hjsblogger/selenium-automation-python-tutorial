@@ -39,8 +39,6 @@ class TestBitCoinClick:
             # Wait for 10 seconds till the Document State is not complete
             wait.until(lambda driver: driver.execute_script('return document.readyState') == 'complete')
 
-            # elem_dropdown = driver.find_element(By.XPATH, 
-            #                 "//*[@id='widget-modal-root']/div[2]/div[1]/div[1]/div/div/div/div[2]/button/p")
             driver.switch_to.frame(1)
 
             # elem_dropdown = driver.find_element(By.CSS_SELECTOR,
@@ -49,7 +47,6 @@ class TestBitCoinClick:
                         EC.presence_of_element_located((By.CSS_SELECTOR, \
                                 "div:nth-child(1) > div > .rounded-foreground > .flex .text-callout")))
             if (elem_dropdown):
-                # elem_dropdown.click()
                 action.move_to_element(elem_dropdown).click().perform()
 
                 try:
