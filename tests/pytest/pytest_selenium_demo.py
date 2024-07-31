@@ -156,6 +156,8 @@ class TestFormInput:
             if exec_platform == 'cloud':
                 driver.execute_script("lambda-status=failed")
 
+        if exec_platform == 'cloud':
+            driver.execute_script("lambda-status=passed")
         print(f"PyTest Demo: Test Passed")
 
     def teardown_method(self):

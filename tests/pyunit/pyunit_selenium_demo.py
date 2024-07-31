@@ -156,6 +156,8 @@ class TestFormInput(unittest.TestCase):
             if exec_platform == 'cloud':
                 driver.execute_script("lambda-status=failed")
 
+        if exec_platform == 'cloud':
+            driver.execute_script("lambda-status=passed")
         print(f"PyUnit Demo: Test Passed")
 
     def tearDown(self):
