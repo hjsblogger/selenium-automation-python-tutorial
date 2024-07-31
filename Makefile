@@ -1,5 +1,6 @@
 # Define variables
 PYTHON := python3
+PYTHON_GEN := python
 PYTEST := pytest
 PIP := pip3
 PROJECT_NAME := [Tutorial] Automation Testing using Selenium Python
@@ -60,6 +61,12 @@ mouse_interactions_test:
 bitcoin_click_test:
 	- echo $(EXEC_PLATFORM)
 	- $(PYTEST) --verbose --capture=no tests/pytest/11_bitcoin_click_test.py
+
+simple_selenium_demo:
+	- echo "Pytest Selenium Demo"
+	- $(PYTEST) --verbose --capture=no tests/pytest/pytest_selenium_demo.py
+	- echo "PyUnit Selenium Demo"
+	- $(PYTHON_GEN) tests/pyunit/pyunit_selenium_demo.py
 
 .PHONY: clean
 clean:
