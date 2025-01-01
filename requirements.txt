@@ -3,5 +3,6 @@ pytest-xdist
 selenium>=4.6.0
 urllib3==1.26.12
 requests
+python-dotenv
 bs4
 py
